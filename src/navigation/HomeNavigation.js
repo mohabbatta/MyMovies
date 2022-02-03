@@ -18,7 +18,8 @@ function HomeTabs() {
                 ),
             }}
             />
-            <Tab.Screen name="My Movies" component={MyMovies} options={{
+            <Tab.Screen  name="My Movies" component={MyMovies} options={{
+                tabBarTestID:"openMyMovies",
                 tabBarActiveTintColor: "#000",
                 tabBarIcon: ({ color, size }) => (
                     <MaterialCommunityIcons name="video-plus" color={color} size={size} />

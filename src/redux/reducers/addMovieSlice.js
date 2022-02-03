@@ -20,8 +20,6 @@ export const addMovieSlice = createSlice({
   reducers: {
     add(state, action) {
       state.movies.push(action.payload)
-    },
-    afterAdd(state,action){
       state.date = '';
       state.imagePath = ''
     },
@@ -45,7 +43,7 @@ export const addMovieSlice = createSlice({
       })
       .addCase(uploadImage.fulfilled, (state, action) => {
         state.isLoading = false,
-        state.imagePath = action.payload
+          state.imagePath = action.payload
       })
       .addCase(uploadImage.rejected, (state, action) => {
         state.isLoading = false;
@@ -56,8 +54,7 @@ export const addMovieSlice = createSlice({
 
 })
 
-export const { add, openDatePicker, closeDatePicker,
-  setDate, loadingImage, setImage ,afterAdd} = addMovieSlice.actions
+export const { add, openDatePicker, closeDatePicker,setDate, } = addMovieSlice.actions
 
 export default addMovieSlice.reducer
 

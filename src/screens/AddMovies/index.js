@@ -4,7 +4,7 @@ import { Text, View, TextInput } from "react-native";
 import { useForm, Controller } from "react-hook-form";
 import { Button } from 'react-native-elements';
 import { useSelector, useDispatch } from 'react-redux'
-import { add,afterAdd } from '../../redux/reducers/addMovieSlice'
+import { add } from '../../redux/reducers/addMovieSlice'
 import styles from './style'
 import AddDate from '../AddMovies/components/AddDate';
 import AddPoster from './components/AddPoster';
@@ -32,11 +32,10 @@ const AddMovies = () => {
         date: state.date
       })
     );
-    dispatch(afterAdd());
     createAlert();
   }
   return (
-    <View style={styles.container}>
+    <View testID="addMovies" style={styles.container} >
       <Text style={styles.labelText} > title </Text>
       <Controller
         control={control}

@@ -9,7 +9,7 @@ const MyMovies = ({ navigation }) => {
 
     const state = useSelector(state => state.addMovie)
     return (
-        <View style={{ flex: 1, justifyContent: "center" }}>
+        <View style={{ flex: 1, justifyContent: "center" }} testID="myView">
 
             {state.movies.length === 0 ?
                 <NoFoundItem /> :
@@ -24,6 +24,7 @@ const MyMovies = ({ navigation }) => {
                 />
             }
             <FAB
+                testID="openAddMovie"
                 onPress={() => navigation.navigate('AddMovie')}
                 placement="right"
                 icon={{ name: 'add', color: 'white' }}

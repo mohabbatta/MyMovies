@@ -17,7 +17,7 @@ const PopularMovies = () => {
   }, [state.status, dispatch])
 
   return (
-    <View style={{ flex: 1, justifyContent: "center" }}>
+    <View style={{ flex: 1, justifyContent: "center" }} testID="popularView">
       {state.status == 'loading' ? <ActivityIndicator color={"#000"}
         style={{ justifyContent: 'center' }} /> :
         state.status == 'error' ? <Text> some thing wrong </Text> :
